@@ -2,7 +2,7 @@
 #
 # Script to check if we can access the ARM-X instance
 #
-# include in other scripts using "source /armx/run/checkarmx"
+# include in other scripts using "source /host/armx/run/checkarmx"
 
 ping -W 1 -c 1 192.168.100.2 > /dev/null
 if [ $? -ne 0 ]

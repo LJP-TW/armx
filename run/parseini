@@ -4,7 +4,7 @@
 # variables of importance. Could write this
 # in a much better manner.
 
-source /armx/run/utils
+source /host/armx/run/utils
 
 if [ "$1" = "" ]
 then

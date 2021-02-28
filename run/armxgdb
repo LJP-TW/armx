@@ -21,10 +21,10 @@ else
    attach="--attach \\\`pidof $1\\\`"
 fi
 
-source /armx/run/checkarmx
+source /host/armx/run/checkarmx
 ARMXDEVICE=$(</tmp/armxrunning)
-source /armx/run/parseini /armx/$ARMXDEVICE/config
-ROOTFSPATH="/armx/$ARMXDEVICE/$ROOTFS"
+source /host/armx/run/parseini /armx/$ARMXDEVICE/config
+ROOTFSPATH="/host/armx/$ARMXDEVICE/$ROOTFS"
 
 $gdb -q \
    -ex="target remote | ssh -T root@192.168.100.2 gdbserver - $attach" \

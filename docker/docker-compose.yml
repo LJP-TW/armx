@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  container:
+    build: ./
+    tty: true
+    volumes:
+      - /:/host:rw
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_PTRACE
+    privileged: true
+    environment:
+      - TERM=xterm-256color
+      - PYTHONIOENCODING=utf-8
+

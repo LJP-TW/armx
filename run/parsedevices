@@ -2,12 +2,12 @@
 #
 # Parses the devices file
 
-source /armx/run/utils
+source /host/armx/run/utils
 
 declare -a ids qemus machines cpus dtbs mems kernels qemuopts mtdparts drives bootargs nics nets customs descs
 declare -A qmachine qdrives qbootargs qnics qnet qcustoms
 
-ARMXROOT="/armx"
+ARMXROOT="/host/armx"
 DEVICES="${ARMXROOT}/devices"
 QEMUOPTS="${ARMXROOT}/qemuopts"
 DEFAULT_NET="tap,ifname=tap0,script=no,downscript=no"
