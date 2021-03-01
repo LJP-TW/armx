@@ -1,7 +1,7 @@
 # Sample device configuration file
 #
 id=Tenda_AC15
-nvram=armx_nvram.ini
+nvram=nvram.ini
 rootfs=rootfs
 randomize_va_space=0
-initcommands="export LD_PRELOAD=/libnvram-armx.so:/tenda_hooks.so;/etc_ro/init.d/rcS;/bin/sh"
+initcommands="export LD_PRELOAD=/nvram_emu.so:/tenda_hooks.so;/etc_ro/init.d/rcS;/bin/sh"

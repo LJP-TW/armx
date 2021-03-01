@@ -23,7 +23,7 @@ SOURCES=tenda_hooks.c
 OBJECTS=$(SOURCES:.c=.o)
 TARGET=tenda_hooks.so
 
-all: $(SRC)/$(SOURCES) $(BIN)/$(TARGET)
+all: directories $(SRC)/$(SOURCES) $(BIN)/$(TARGET)
 
 $(BIN)/$(TARGET): $(OBJ)/$(OBJECTS)
 	$(LD) $(LDFLAGS) $(OBJ)/$(OBJECTS) -o $@
@@ -34,3 +34,11 @@ $(OBJ)/%.o: $(SRC)/%.c
 .PHONY: clean
 clean:
 	rm -f $(OBJ)/* $(BIN)/*
+
+directories: $(BIN) $(OBJ)
+
+$(BIN):
+	mkdir -p $(BIN)
+
+$(OBJ):
+	mkdir -p $(OBJ)
