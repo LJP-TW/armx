@@ -1,4 +1,4 @@
-TOOLCHAIN = /root/buildroot/buildroot-2020.02.9_ARM_EABI5_LSB_uClibc_7A_Thumb2/output/host/usr/bin
+TOOLCHAIN = /root/buildroot-2020.02.9/output/host/usr/bin
 
 export PATH := $(TOOLCHAIN):$(PATH)
 

@@ -9,7 +9,7 @@ For your ubuntu (or other distributes) host, please run:
 docker-compose build                         # build image
 docker-compose up -d                         # create container and run it
 docker ps -a                                 # view container info
-docker exec -it docker_container_1 /bin/bash # get into container
+docker exec -it armxcontainer /bin/bash      # get into container
 docker-compose down                          # remove container
 ```
 
@@ -31,7 +31,7 @@ The docker container already setup NAT.
 The only thing you have to do is setting following network routing for ubuntu.
 
 ```
-sudo ip route add 192.168.100.0/24 via <docker container ip> dev <interface name>
+sudo ip route add 192.168.100.0/24 via <docker container ip>
 ```
 
 For example:
@@ -68,5 +68,5 @@ Ubuntu Network:
 
 Add this routing rule:
 ```
-sudo ip route add 192.168.100.0/24 via 172.21.0.2 dev br-f21015dd91d8
+sudo ip route add 192.168.100.0/24 via 172.21.0.2
 ```

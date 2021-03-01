@@ -2,6 +2,7 @@ version: '3'
 
 services:
   container:
+    container_name: armxcontainer
     build: ./
     tty: true
     volumes:
